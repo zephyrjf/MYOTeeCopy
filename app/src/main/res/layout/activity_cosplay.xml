@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+              android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/cosplay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cosplay_top_height"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp">
+            <Button
+                android:id="@+id/cosplay_back"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="返回"
+                android:layout_gravity="center_vertical"
+                android:gravity="left"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/white"/>
+            <Button
+                android:id="@+id/cosplay_save"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="存储"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/white"/>
+            <Button
+                android:id="@+id/cosplay_share"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:text="分享"
+                android:layout_gravity="center_vertical"
+                android:gravity="right"
+                android:textColor="@color/colorPrimary"
+                android:background="@android:color/white"/>
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/cosplay_webview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+
+        <com.shizhefei.view.indicator.ScrollIndicatorView
+            android:id="@+id/cosplay_indicator"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cosplay_top_height"/>
+        <android.support.v4.view.ViewPager
+            android:id="@+id/cosplay_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/cosplay_gird_height"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/transition"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/white">
+        <ImageView
+            android:id="@+id/tran_pic"
+            android:src="@drawable/btnsingle_man_down"
+            android:layout_width="@dimen/homepage_big_button_size"
+            android:layout_height="@dimen/homepage_big_button_size"
+            android:layout_centerInParent="true"/>
+        <TextView
+            android:layout_below="@id/tran_pic"
+            android:text="正在卖力加载中..."
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="@dimen/homepage_big_log_bottom_text"/>
+    </RelativeLayout>
+
+</FrameLayout>

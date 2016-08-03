@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.zephyr.myoteecopy.MainActivity">
+
+    <ToggleButton
+        android:id="@+id/home_sound"
+        android:layout_width="@dimen/homepage_top_icon_width"
+        android:layout_height="@dimen/homepage_top_icon_height"
+        android:background="@drawable/btn_homepage_sound"
+        android:checked="true"
+        android:textOff=""
+        android:textOn=""/>
+
+    <Button
+        android:id="@+id/home_share"
+        android:layout_toRightOf="@id/home_sound"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_width="@dimen/homepage_top_icon_width"
+        android:layout_height="@dimen/homepage_top_icon_height"
+        android:background="@drawable/btn_homepage_share"/>
+
+    <Button
+        android:id="@+id/home_feedback"
+        android:layout_alignParentRight="true"
+        android:layout_width="@dimen/homepage_feedback_width"
+        android:layout_height="@dimen/homepage_feedback_height"
+        android:background="@drawable/btn_feedback"/>
+
+    <LinearLayout
+        android:id="@+id/big_button"
+        android:layout_width="@dimen/homepage_big_button_group_width"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="#00000000"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/choose_man"
+            android:layout_width="@dimen/homepage_big_button_size"
+            android:layout_height="@dimen/homepage_big_button_size"
+            android:background="@drawable/btn_choose_man"/>
+        <!--<View-->
+            <!--android:layout_width="1dp"-->
+            <!--android:layout_height="@dimen/homepage_big_button_size"-->
+            <!--android:background="@android:color/darker_gray"/>-->
+        <Button
+            android:id="@+id/choose_woman"
+            android:layout_width="@dimen/homepage_big_button_size"
+            android:layout_height="@dimen/homepage_big_button_size"
+            android:background="@drawable/btn_choose_woman"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_above="@id/big_button"
+        android:layout_marginBottom="14dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/homepage_big_logo_width"
+            android:layout_height="@dimen/homepage_big_logo_height"
+            android:background="@drawable/pic_startpage_logo_faceq"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="创造你的卡通形象！"
+            android:textSize="@dimen/homepage_big_log_bottom_text"
+            android:layout_gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/big_button"
+        android:id="@+id/double_mode"
+        android:clickable="true"
+        style="@style/home_long_button_linear">
+        <ImageView
+            android:layout_width="@dimen/homepage_small_icon_size"
+            android:layout_height="@dimen/homepage_small_icon_size"
+            android:scaleType="centerCrop"
+            android:background="@drawable/btnfun_double_tag"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textSize="@dimen/homepage_small_icon_size"
+            android:text="双人模式"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/double_mode"
+        android:id="@+id/history"
+        android:clickable="true"
+        style="@style/home_long_button_linear">
+        <ImageView
+            android:layout_width="@dimen/homepage_small_icon_size"
+            android:layout_height="@dimen/homepage_small_icon_size"
+            android:scaleType="centerCrop"
+            android:background="@drawable/btnfun_history_tag"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textSize="@dimen/homepage_small_icon_size"
+            android:text="历史形象"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@id/history"
+        android:id="@+id/new_products"
+        android:clickable="true"
+        style="@style/home_long_button_linear">
+        <ImageView
+            android:layout_width="@dimen/homepage_small_icon_size"
+            android:layout_height="@dimen/homepage_small_icon_size"
+            android:scaleType="centerCrop"
+            android:background="@drawable/btnfun_newproducts_tag"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="12dp"
+            android:textSize="@dimen/homepage_small_icon_size"
+            android:text="脸萌新品"/>
+    </LinearLayout>
+
+</RelativeLayout>

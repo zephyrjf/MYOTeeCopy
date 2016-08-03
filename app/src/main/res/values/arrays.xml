@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="tabs">
+        <item>@drawable/xtab_hair</item>
+        <item>@drawable/xtab_face</item>
+        <item>@drawable/xtab_eyebrow</item>
+        <item>@drawable/xtab_eye</item>
+        <item>@drawable/xtab_mouth</item>
+    </array>
+</resources>
