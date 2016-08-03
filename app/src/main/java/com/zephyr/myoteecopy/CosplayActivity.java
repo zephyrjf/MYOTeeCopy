@@ -142,8 +142,7 @@ public class CosplayActivity extends Activity implements View.OnClickListener{
                 } else {
                     saveWebViewPicture();
                 }
-
-                DisplayUtil.showToast(this, "save");
+//                DisplayUtil.showToast(this, "save");
                 break;
             case R.id.cosplay_share:
                 DisplayUtil.showToast(this, "share");
@@ -155,7 +154,8 @@ public class CosplayActivity extends Activity implements View.OnClickListener{
     private void saveWebViewPicture() {
         mWebView.setDrawingCacheEnabled(true);
         mWebView.buildDrawingCache();
-        DisplayUtil.SavePicture(Bitmap.createBitmap(mWebView.getDrawingCache()));
+        String result = DisplayUtil.SavePicture(Bitmap.createBitmap(mWebView.getDrawingCache()));
+        DisplayUtil.showToast(this, result);
         mWebView.setDrawingCacheEnabled(false);
     }
 

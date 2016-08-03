@@ -65,7 +65,7 @@ public class DisplayUtil {
         sToast.show();
     }
 
-    public static void SavePicture(Bitmap bitmap) {
+    public static String SavePicture(Bitmap bitmap) {
         File sdCard = Environment.getExternalStorageDirectory();
         sdCard = new File(sdCard, "MYOTEECopy");
         sdCard.mkdirs();
@@ -76,10 +76,13 @@ public class DisplayUtil {
             bitmap.compress(Bitmap.CompressFormat.PNG, 100, out);
             out.flush();
             out.close();
+            return sdCard.getAbsolutePath().toString();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-        } catch (IOException e) {
+            return "File Create Failed";
+        } catch (Exception e) {
             e.printStackTrace();
+            return "IO error";
         }
     }
 
